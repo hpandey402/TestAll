@@ -6,5 +6,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'demo-test2';
+  title = 'sample Interpolation';
+  heading = "interpolation heading";
+  income = 4000;
+  expenditure = 3000;
+  metaData = {
+    typeValue: 'text',
+    placeholderValue:'Enter password',
+    readOnlyValue: true
+  }
+
+  getName(){
+    return "Max Millan";
+  }
 }

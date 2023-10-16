@@ -1,0 +1,28 @@
+<div *ngIf="age > 18" id="grAgeTemp">
+ Age is greater than 18
+</div>
+
+<div *ngIf="age <= 18" id="lsAgeTemp">
+    Age is less than or equal to 18
+</div>
+
+**************************
+
+<div *ngIf="age > 18; then conditionTrue; else conditionFalse">
+</div>
+
+<ng-template #conditionTrue>
+<h1 id="thenClause">Age is greater than 18 inside ngTemplate</h1>
+</ng-template>
+
+<ng-template #conditionFalse>
+<h1 id="elseClause">Age is less than 18 inside ngTemplate</h1>
+</ng-template>
+
+****************************
+<div *ngIf="getDataFromTs()">
+ <h6 id="controllerMethod">Using a method condition</h6>
+</div>
+
+****************************
+<div [hidden]="age>18" id="hiddenId"> should show hidden data</div>

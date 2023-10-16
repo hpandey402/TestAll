@@ -1,0 +1,16 @@
+<div>
+  <h1 [ngClass]="headingColor" id="headColor">Something Heading</h1>
+  <h1 [ngClass]="age > 18 ? 'font-red' : 'font-green'" id="ternary">
+    Age is in red color if age is grater than 18 else show green color.
+  </h1>
+  <h1 [ngClass]="{ 'font-green': age <= 18 }" id="objectId">Property as ng Class</h1>
+  <h1
+    [ngClass]="[
+      age > 18 ? 'font-red' : 'font-green',
+      age > 18 ? 'font-large' : 'font-small'
+    ]"
+  >
+    Heading as array ng class
+  </h1>
+  <button (click)="changeHeadingColor()">Change Color</button>
+</div>

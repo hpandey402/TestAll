@@ -1,0 +1,26 @@
+<div *ngFor="let item of names" class="sampleArray">
+ <div>{{item}}</div>
+</div>
+<br>
+
+******complex array ****
+<div *ngFor="let item of complexArr" class="complexArr">
+  <div>{{item.id}} - {{item.name}}</div>
+</div>
+<br>
+
+****** finding index and remaining inbuilt values ********
+<div class="complexArrProps" *ngFor="let item of complexArr; let i = index; let isFirst = first; let isLast =last; let isEven = even; let isOdd=odd;" >
+    <div>index - {{i}} - isFirst - {{isFirst}} - isLast - {{isLast}} - isEven - {{isEven}} - isOdd - {{isOdd}}</div>
+</div>
+<br>
+
+****** ng container *****
+<ng-container *ngFor="let item of complexArr">
+    <div class="containerClass">{{item.id}} - {{item.name}}</div>
+</ng-container>
+
+********Dynamic change array ********
+<div>
+    <button (click)="addElement()" id="buttonAdd">Add</button>
+</div>

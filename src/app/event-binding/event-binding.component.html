@@ -1,0 +1,23 @@
+<button (click)="buttonClick()" id="btnClickId">Emit Event</button>
+<br>
+<button on-click="cononicalEvent()" id="cononicalEventId">Cononical Event</button>
+<br>
+<br>
+<input placeholder="Event emission on  value change" (input)="onInputChange()" id="inputEventId">
+<br>
+<br>
+<input placeholder="Capture the event of the input" (input)="onValueChanged($event)" id="captureEventId">
+<br>
+<br>
+<div id="outerEmitter" style="width: 100px;height:100px;border:1px solid black;" (click)="outerEmitter()">
+    <div id="innerEmitter" style="width: 50px;height:50px;border:1px solid black; margin: 25px auto;" (click)="innerEmitter(); $event.stopPropagation();">
+    </div>
+</div>
+<br>
+<br>
+<input type="text" (keyup)="keyupEmitter()" placeholder="keyup only" id="keyupId">
+<br>
+<br>
+<input type="text" (keyup.enter)="keyupEmitter()" placeholder="keyup with enter" id="keyupEnterId">
+<br>
+<p>{{label}}</p>

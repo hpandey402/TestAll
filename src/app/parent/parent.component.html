@@ -1,0 +1,6 @@
+<app-child [title]="parentTitle" [metersValue]="metersModel"></app-child>
+
+<input type="number" placeholder="Enter value in meters" [(ngModel)]="metersModel" id="metersInput">
+<br>
+<br>
+<button (click)="changeTitle()">Change Title</button>

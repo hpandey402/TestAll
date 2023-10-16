@@ -1,0 +1,13 @@
+<h1>View Child decorator</h1>
+
+<input type="text" placeholder="Focus on page load" #sample id="firstElement">
+<br>
+<input type="text" placeholder="No focus" #sample id="secondElement">
+
+<p #changeStyles id="paraElement">This is a para</p>
+
+
+<h2>View Child with components</h2>
+<app-child #childRef></app-child>
+<button (click)="changeChildTitle()">Change child component value</button>
+<button (click)="accessChildMethod()" id="accessId">Access Child Methods</button>
